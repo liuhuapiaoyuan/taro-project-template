@@ -1,0 +1,18 @@
+{
+  "extends": ["taro/react"],
+  "rules": {
+    "indent": [
+      "error",
+      2
+    ],
+    "react/self-closing-comp": [
+      "error"
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "Taro"
+      }
+    ]
+  }
+}
