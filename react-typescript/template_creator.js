@@ -37,6 +37,7 @@ const basePageFiles = [
 ]
 
 module.exports = {
+  desc: '使用 react-typescript 的模板',
   handler,
   basePageFiles,
   platforms: ['react', 'nerv']
