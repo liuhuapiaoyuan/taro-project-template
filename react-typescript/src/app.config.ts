@@ -1,5 +1,5 @@
-import {AppConfig} from '@tarojs/taro'
-const config :AppConfig ={
+import {Config} from '@tarojs/taro'
+const config :Config ={
   pages: [
     'pages/index/index',
   ],

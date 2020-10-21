@@ -15,13 +15,13 @@ const handler = {
   '/global.d.ts': createWhenTs,
   '/tsconfig.json': createWhenTs,
   '/src/pages/index/index.tsx' ({ pageName }) {
-    return { setPageName: `/src/pages/${pageName}/index.tsx` }
+    return { setPageName: `/src/pages/${pageName}/${pageName}.tsx` }
   },
   '/src/pages/index/index.module.less' ({ pageName,css}) {
-    return { setPageName: `/src/pages/${pageName}/index.module.${cssExts[css]}` }
+    return { setPageName: `/src/pages/${pageName}/${pageName}.module.${cssExts[css]}` }
   },
   '/src/pages/index/index.config.ts' ({ pageName}) {
-    return { setPageName: `/src/pages/${pageName}/index.config.ts` }
+    return { setPageName: `/src/pages/${pageName}/${pageName}.config.ts` }
   },
   //增加一个模板
   '/src/pages/index/components/index.ts' ({ pageName}) {
@@ -32,7 +32,8 @@ const handler = {
 const basePageFiles = [
   '/src/pages/index/index.tsx',
   '/src/pages/index/index.module.less',
-  '/src/pages/index/index.config.ts'
+  '/src/pages/index/index.config.ts',
+  '/src/pages/index/components/index.ts'
 ]
 
 module.exports = {
