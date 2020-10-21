@@ -22,6 +22,10 @@ const handler = {
   },
   '/src/pages/index/index.config.ts' ({ pageName}) {
     return { setPageName: `/src/pages/${pageName}/index.config.ts` }
+  },
+  //增加一个模板
+  '/src/pages/index/components/index.ts' ({ pageName}) {
+    return { setPageName: `/src/pages/${pageName}/components/index.ts` }
   }
 }
 
