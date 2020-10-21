@@ -1,16 +1,15 @@
 import Taro from '@tarojs/taro'
-import interceptors from './interceptors'
-import {TokenRepository} from './token'
 
 
 const API_HOST =  'http://localhost:8328'
+
+
 export const getApi = (api)=>{
   return API_HOST + api
 }
 class httpRequest {
 
   constructor(){
-    interceptors.forEach(interceptorItem => Taro.addInterceptor(interceptorItem))
   }
 
   baseOptions(params, method = "GET") {
@@ -21,7 +20,6 @@ class httpRequest {
       method,
       header: {
         'content-type': contentType,
-        'Authorization': TokenRepository.get()
       }
     };
     return Taro.request(option);

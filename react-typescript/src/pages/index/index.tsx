@@ -1,6 +1,5 @@
 import React from 'react'
-import Taro,{ usePullDownRefresh } from '@tarojs/taro'
-import {View} from '@tarojs/components'
+import { View } from '@tarojs/components'
 
 import styles from './index.module.<%= cssExt %>'
 
