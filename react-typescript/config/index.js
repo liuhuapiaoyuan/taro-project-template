@@ -12,7 +12,11 @@ const config = {
   sourceRoot: 'src',
   outputRoot: 'dist',
   plugins: [
-    '@tarojs/plugin-sass'
+    '@tarojs/plugin-sass',
+    ['tarojs-plugin-generator',{
+      css:'sass',  //可配置css编译器： 支持 none sass less stylus
+      cssModules:'page',
+    }]
   ],
   defineConstants: {
   },

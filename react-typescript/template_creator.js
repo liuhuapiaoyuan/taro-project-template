@@ -14,7 +14,10 @@ const cssExts = {
 const handler = {
   '/global.d.ts': createWhenTs,
   '/tsconfig.json': createWhenTs,
-  '/src/pages/index/index.tsx' ({ pageName }) {
+  '/src/pages/index/index.tsx' ({ pageName,period }) {
+    if(period === "createPage"){
+      //创建页面的时候才开始区分
+    }
     return { setPageName: `/src/pages/${pageName}/${pageName}.tsx` }
   },
   '/src/pages/index/index.module.less' ({ pageName,css}) {
@@ -36,8 +39,13 @@ const basePageFiles = [
   '/src/pages/index/components/index.ts'
 ]
 
+
+
+// taro create --name=""
+
+
 module.exports = {
-  desc: '使用 react-typescript 的模板',
+  desc: '使用 react-typescript(自带页面/组件创建工具) 的模板',
   handler,
   basePageFiles,
   platforms: ['react', 'nerv']
