@@ -45,7 +45,7 @@ const basePageFiles = [
 
 
 module.exports = {
-  desc: '使用 react-typescript(自带页面/组件创建工具) 的模板',
+  desc: '使用 react-typescript(自带页面/组件创建工具) 的模板，可以通过 tao gen --page快速创建页面',
   handler,
   basePageFiles,
   platforms: ['react', 'nerv']
